@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "computer_vision_py"
+version = "1.6.5"
+description = "DEMO: Collection of various computer vision projects"
+authors = ["Emile Averill <averille.cloud.dev@gmail.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+keywords = ["computer", "vison", "opencv", "numpy", "python"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+exifread = "*"
+# prebuilt CPU-only OpenCV packages
+opencv-python = "==4.5.5.64"
+opencv-contrib-python = "==4.5.5.64"
+pathvalidate = "*"
+Pillow = "*"
+requests = "*"
+matplotlib = "*"
+numpy = "*"
+scipy = "*"
+scikit-image = "*"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+coverage = "*"
+flake8 = "*"
+pre-commit = "*"
+pylint = "*"
+pytest = "*"
+yapf = "*"
+
+[tool.black]
+line-length = 80
+target-version = ["py39"]
+
+[tool.yapf]
+based_on_style = "pep8"
+spaces_before_comment = 2
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
